@@ -1,0 +1,14 @@
+#summary Home Page for ThumbMarks Visual Bookmark Google Gadget
+#labels Featured
+
+= Introduction =
+
+This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
