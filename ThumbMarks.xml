@@ -238,7 +238,7 @@ border: 0 none;
     text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
     text-overflow: ellipsis;
     color: #FFFFFF;
-    background: url(http://sites.google.com/a/timalosi.com/wallpapers/downloads/iPhoneToolbar.png) #6d84a2 repeat-x;
+    background: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneToolbar.png) #6d84a2 repeat-x;
     border-bottom: 1px solid #2d3642;
 }
     
@@ -246,7 +246,7 @@ border: 0 none;
     margin: 0;
     border-bottom: 1px solid #E0E0E0;
     padding: 0;
-    background: url(http://sites.google.com/a/timalosi.com/wallpapers/downloads/iPhoneArrow.png) #ffffff no-repeat right center;
+    background: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneArrow.png) #ffffff no-repeat right center;
     font-size: 12px;
     font-weight: bold;
     list-style: none;
@@ -360,7 +360,7 @@ a.iPhoneList {
           + "<span class='thumb_" + theme + display + imgsize + "' style='background-image: url(" 
           + thumbURL(sLinkURL, stwsize, feed.Entry[i].Summary)
           + ");" + chkThumbCenter() + "' onmouseover='tooltip.show(\"" + feed.Entry[i].Title + "\");' onmouseout='tooltip.hide();' >"
-          + "<img src='http://sites.google.com/a/timalosi.com/wallpapers/downloads/btn4.png' style='border: 0px;' />"
+          + "<img src='http://visual-bookmarks.googlecode.com/svn/trunk/glare" + imgsize + display + ".png' style='border: 0px;' />"
           + "</span>";
           
           if (display == "Icon") {
