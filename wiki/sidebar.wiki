@@ -1,6 +1,4 @@
-= ThumbMarks =
-
 = Project Links =
 [Home]
-Help
 
+Help
