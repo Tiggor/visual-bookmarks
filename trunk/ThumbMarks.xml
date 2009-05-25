@@ -81,7 +81,7 @@
 }
 
 .header_iPhone {
-    height: 50px; padding-top: 25px;
+    height: 50px; padding-top: 20px;
     background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png); 
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -91,7 +91,7 @@
 }
 
 .footer_iPhone {
-    height: 90px; 
+    height: 90px; padding-top: 20px;
     clear: left;
     background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png); 
     background-repeat:no-repeat;
