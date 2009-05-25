@@ -14,7 +14,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46"
-   sodipodi:docname="iphone btn.svg"
+   sodipodi:docname="iphone btn glare.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs4">
@@ -68,6 +68,42 @@
        x2="316.625"
        y2="613.10229"
        gradientUnits="userSpaceOnUse" />
+    <inkscape:perspective
+       id="perspective2472"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3273">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="path3275"
+         sodipodi:cx="577.30219"
+         sodipodi:cy="883.66669"
+         sodipodi:rx="35.860416"
+         sodipodi:ry="35.860416"
+         d="M 613.1626,883.66669 A 35.860416,35.860416 0 1 1 541.44177,883.66669 A 35.860416,35.860416 0 1 1 613.1626,883.66669 z"
+         transform="translate(2,-2)" />
+    </clipPath>
+    <inkscape:perspective
+       id="perspective3338"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3371">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1"
+         d="M 457.84375,981.15625 L 457.84375,981.21875 C 453.87005,981.68438 450.78124,985.05815 450.78125,989.15625 C 450.78125,993.25317 453.87169,996.62658 457.84375,997.09375 L 457.84375,997.15625 L 458.78125,997.15625 L 513.90625,997.15625 L 513.90625,997 C 517.56524,996.26499 520.31249,993.03062 520.3125,989.15625 C 520.3125,985.28177 517.56538,982.0474 513.90625,981.3125 L 513.90625,981.15625 L 458.78125,981.15625 L 457.84375,981.15625 z"
+         id="path3373" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -79,16 +115,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="78.015155"
-     inkscape:cy="520"
+     inkscape:zoom="3.959798"
+     inkscape:cx="419.05902"
+     inkscape:cy="133.18393"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1400"
      inkscape:window-height="994"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4" />
+     inkscape:window-x="0"
+     inkscape:window-y="22" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -109,8 +145,8 @@
        id="rect2383"
        width="884.89362"
        height="629.32501"
-       x="-86.873123"
-       y="256.36194"
+       x="-102.02541"
+       y="162.41776"
        rx="20"
        ry="26.4" />
     <path
@@ -135,5 +171,44 @@
        sodipodi:rx="23.738585"
        sodipodi:ry="0"
        d="M 218.19295,437.17929 A 23.738585,0 0 1 1 170.71578,437.17929 A 23.738585,0 0 1 1 218.19295,437.17929 z" />
+    <image
+       y="844.66669"
+       x="539.81738"
+       id="image2474"
+       height="78"
+       width="78"
+       sodipodi:absref="C:\Tim Stuff\Subversion\ThumbMarks\iPhoneButton.png"
+       xlink:href="iPhoneButton.png"
+       style="fill:#cea1a1;fill-opacity:1"
+       clip-path="url(#clipPath3273)"
+       inkscape:export-filename="C:\Tim Stuff\Subversion\ThumbMarks\iPhoneRoundButton.png"
+       inkscape:export-xdpi="69.017609"
+       inkscape:export-ydpi="69.017609" />
+    <image
+       y="853.75812"
+       x="289.29959"
+       id="image3259"
+       height="78"
+       width="78"
+       sodipodi:absref="C:\Tim Stuff\Subversion\ThumbMarks\iPhoneButton.png"
+       xlink:href="iPhoneButton.png"
+       inkscape:transform-center-x="-218.19295"
+       inkscape:transform-center-y="19.697975" />
+    <path
+       style="fill:#cea1a1;fill-opacity:1;stroke:#a03636;stroke-width:1.01428616;stroke-opacity:1"
+       d="M 287.22637,838.73082 C 275.98808,838.73082 266.94065,850.67975 266.94065,865.51432 L 266.94065,918.51077 C 266.94065,933.34532 275.98808,945.29429 287.22637,945.29427 L 368.59114,945.29427 C 379.82943,945.29427 388.87686,933.34529 388.87687,918.51077 L 388.87687,865.51432 C 388.87687,850.67977 379.82942,838.73082 368.59114,838.73082 L 287.22637,838.73082 z M 329.44604,854.61074 C 349.52379,854.61077 365.83355,870.92051 365.83355,890.99826 C 365.83356,911.07603 349.52378,927.35408 329.44604,927.35408 C 309.3683,927.35405 293.09022,911.076 293.09022,890.99826 C 293.09022,870.92054 309.36829,854.61074 329.44604,854.61074 z"
+       id="path3252" />
+    <image
+       y="978.66193"
+       x="446.224"
+       id="image3340"
+       height="21"
+       width="78"
+       sodipodi:absref="C:\Tim Stuff\Subversion\ThumbMarks\iPhoneSpeaker.png"
+       xlink:href="iPhoneSpeaker.png"
+       clip-path="url(#clipPath3371)"
+       inkscape:export-filename="C:\Tim Stuff\Subversion\ThumbMarks\iPhoneRoundSpeaker.png"
+       inkscape:export-xdpi="71.190002"
+       inkscape:export-ydpi="71.190002" />
   </g>
 </svg>
