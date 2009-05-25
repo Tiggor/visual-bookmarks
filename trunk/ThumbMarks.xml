@@ -336,9 +336,7 @@ a.iPhoneList {
     html = "";
     
     if (theme == "iPhone") {
-      html += "<div  class='header_iPhone'></div>";
-      
-      //<center><image src='http://sites.google.com/a/timalosi.com/wallpapers/downloads/iPhoneSpeaker.png' style='border: 0px;' /></center></div>";    
+      html += "<div class='header_iPhone'><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png' style='border: 0px;' /></center></div>";    
     }
    
 
