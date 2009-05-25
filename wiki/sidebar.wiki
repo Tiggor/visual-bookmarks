@@ -2,7 +2,3 @@
 [Home]
 
 Help
-
-= Site Contents =
-
-<wiki:toc max_depth="1" />
