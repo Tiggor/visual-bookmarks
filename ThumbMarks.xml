@@ -269,7 +269,7 @@ a.iPhoneList {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#666; color:#FFF
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#666; color:#FFF;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -334,13 +334,7 @@ a.iPhoneList {
     
     if (theme == "iPhone") {
       html += "<div class='header_iPhone'><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png' style='border: 0px;' /></center></div>";    
-    }
-   
-
-        //  + "<span class='thumb_" + theme + display + imgsize + "' style='background-image: url(http://www.shrinktheweb.com/xino.php?embed=1&amp;STWAccessKeyId=9b0e0b2b9d7a6e4&amp;Size="
-        //  + stwsize + "&amp;stwUrl="
-        //  + feed.Entry[i].Link 
-    
+    }    
     
     document.getElementById('link_div').innerHTML = html;
       
