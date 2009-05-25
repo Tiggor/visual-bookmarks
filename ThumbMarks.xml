@@ -81,7 +81,7 @@
 }
 
 .header_iPhone {
-    height: 50px;
+    height: 50px; padding-top: 25px;
     background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png); 
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -382,8 +382,7 @@ a.iPhoneList {
     }    
     html += "</div>";
     if (theme == "iPhone") {
-      html += "<div class='footer_iPhone' ></div>";
-      //<center><image src='http://sites.google.com/a/timalosi.com/wallpapers/downloads/iPhoneButton.png' style='border: 0px;' /></center></div>";    
+      html += "<div class='footer_iPhone' ><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png' style='border: 0px;' /></center></div>";    
     }
     
     document.getElementById('link_div').innerHTML = html;
