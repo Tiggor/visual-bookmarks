@@ -86,8 +86,6 @@
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center; 
-    border: 1px red dashed;
-	
 }
 
 .footer_iPhone {
@@ -97,7 +95,6 @@
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center; 
-    border: 1px red dashed;
 }        
 
 .thumb_iGoogleIconSmall,                
