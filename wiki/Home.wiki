@@ -6,4 +6,5 @@
 This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme
 
 
-= Details =
+= Screen Shots =
+visual-bookmarks.googlecode.com/svn/wiki/Thumbmarks-Screenshot.png
