@@ -7,4 +7,4 @@ This Gadget will display visual thumbnails for tagged Bookmark feeds from Social
 
 
 = Screen Shots =
-visual-bookmarks.googlecode.com/svn/wiki/Thumbmarks-Screenshot.png
+http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG
