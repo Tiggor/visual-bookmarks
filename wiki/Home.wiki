@@ -7,4 +7,6 @@ This Gadget will display visual thumbnails for tagged Bookmark feeds from Social
 
 
 = Screen Shots =
+The screen shot below shows three of the four display themes.  There are two themes, an iPhone like theme and a straight iGoogle theme.  For each theme, you can display the links as icons or as a list.
+
 http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG
