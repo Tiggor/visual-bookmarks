@@ -1,0 +1,22 @@
+#summary How to set up the ThumbMarks Gadget
+
+= Introduction =
+
+There are several settings that need to be set in order for the ThumbMarks gadget to work correctly.  This page details how to do that.
+
+
+= Settings =
+
+==Service==
+==User Name==
+==Category / Tag ==
+==Number of Entries==
+==Image Size==
+==Center the Preview==
+==Zoom the Preview==
+==Display As==
+==Display Theme==
+==Shrink The Web Key==
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
