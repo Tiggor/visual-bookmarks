@@ -2,12 +2,15 @@
 <Module>
   <ModulePrefs title="ThumbMarks Visual Bookmarks" 
     description="This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme" 
-    author="Tim Alosi" author_email="" screenshot="" thumbnail=""
+    author="Tim Alosi" author_email="gadget+feedback@timalosi.com" screenshot="" thumbnail=""
     title_url="http://www.timalosi.com" >
     <Require feature="dynamic-height"/>
   </ModulePrefs>
   <UserPref name="service" display_name="Bookmark Service" default_value="Delicious" datatype="enum" >
     <EnumValue value="Delicious" />
+    <EnumValue value="Diigo" />
+    <EnumValue value="Dig" />
+    <EnumValue value="Propeller" />
     <EnumValue value="Reddit" />
     <EnumValue value="StumbleUpon" />
   </UserPref>
@@ -282,7 +285,8 @@ a.iPhoneList {
   // CSS Styles for the iPhone List were based on the iui (http://code.google.com/p/iui/) project
 
   // Get userprefs
-  var prefs = new gadgets.Prefs();
+  //var prefs = new gadgets.Prefs();
+  var prefs = new _IG_Prefs();
   var entries = prefs.getInt("num_entries");
   var service = prefs.getString("service");
   var username = prefs.getString("user_name");
@@ -306,24 +310,29 @@ a.iPhoneList {
   }
   
   html = "<div class='bezel_" + theme + "'><div id='link_div' class='links_" + theme + "'><br/><br/><br/></div></div>";
-  document.getElementById('content_div').innerHTML = html;
+  //document.getElementById('content_div').innerHTML = html;
+  _gel("content_div").innerHTML = html;
 
   function getFeed() {  
-    var params = {};  
-    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
-    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
-    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    //var params = {};  
+    //params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+    //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
     var url;
     url = rssURL();
 
     html = "<div><b>Loading " + url + "</b></div>";
-    document.getElementById('link_div').innerHTML = html;
-    gadgets.io.makeRequest(url, response, params, 60);
+    //document.getElementById('link_div').innerHTML = html;
+    _gel("link_div").innerHTML = html;
+    //gadgets.io.makeRequest(url, response, params, 60);
+    _IG_FetchFeedAsJSON(url, response, entries, true);
+
   };
 
-  function response(obj) { 
+  //function response(obj) { 
+  function response(feed) { 
     // obj.data contains the feed data
-    var feed = obj.data;
+    //var feed = obj.data;
     var stwsize, sLinkURL;
     
     stwsize = previewSize();   
@@ -336,7 +345,8 @@ a.iPhoneList {
       html += "<div class='header_iPhone'><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png' style='border: 0px;' /></center></div>";    
     }    
     
-    document.getElementById('link_div').innerHTML = html;
+    //document.getElementById('link_div').innerHTML = html;
+    _gel('link_div').innerHTML = html;
       
     html += "<div class='scroll_" + theme + "' >" ; 
     if (feed != null) {
@@ -376,12 +386,15 @@ a.iPhoneList {
       html += "<div class='footer_iPhone' ><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png' style='border: 0px;' /></center></div>";    
     }
     
-    document.getElementById('link_div').innerHTML = html;
-    gadgets.window.adjustHeight();
+    //document.getElementById('link_div').innerHTML = html;
+    _gel("link_div").innerHTML = html;
+    //gadgets.window.adjustHeight();
+     _IG_AdjustIFrameHeight()
+
   };
     
-  gadgets.util.registerOnLoadHandler(getFeed);
-    
+  //gadgets.util.registerOnLoadHandler(getFeed);
+  _IG_RegisterOnloadHandler(getFeed)    
     
   function stripURL(sURL) {  
     var sDomain;
