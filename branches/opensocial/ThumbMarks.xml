@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="ThumbMarks Visual Bookmarks" 
+    description="This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme" 
+    author="Tim Alosi" author_email="" screenshot="" thumbnail=""
+    title_url="http://www.timalosi.com" >
+    <Require feature="dynamic-height"/>
+  </ModulePrefs>
+  <UserPref name="service" display_name="Bookmark Service" default_value="Delicious" datatype="enum" >
+    <EnumValue value="Delicious" />
+    <EnumValue value="Reddit" />
+    <EnumValue value="StumbleUpon" />
+  </UserPref>
+  <UserPref name="user_name" display_name="User Name" datatype="string" default_value=""/>
+  <UserPref name="mark_tag" display_name="Category / Tag" datatype="string" default_value=""/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="6"/>
+  <UserPref name="image_size" display_name="Image Size" default_value="Small" datatype="enum" >
+    <EnumValue value="Small" />
+    <EnumValue value="Large" />
+  </UserPref>
+  <UserPref name="center_image" display_name="Center the Preview" datatype="bool" default_value="false"/>
+  <UserPref name="zoom_image" display_name="Zoom the Preview" datatype="bool" default_value="false"/>
+  <UserPref name="display" display_name="Display As" default_value="Icon" datatype="enum" >
+    <EnumValue value="Icon" />
+    <EnumValue value="List" />
+  </UserPref>
+  <UserPref name="theme" display_name="Display Theme" default_value="iPhone" datatype="enum" >
+    <EnumValue value="iPhone" />
+    <EnumValue value="iGoogle" />
+  </UserPref>
+  <UserPref name="stwkey" display_name="ShrinkTheWeb Key (not required)" datatype="string" default_value="9b0e0b2b9d7a6e4"/>
+  <Content type="html">
+  <![CDATA[
+  <style> 
+  #content_div { font-size: 80%; float:left;}
+  .bezel_iPhone {
+	border-style: outset;
+	border-width: 3px;
+	border-color: #000000;
+	color: white;
+	background-color: #eeeeee;
+	-moz-border-radius: 38px;
+	-webkit-border-radius: 38px;
+	border-radius: 38px;
+	padding: 4px 4px 4px 4px;
+	line-height: 1.4em;
+	margin: 10px;
+	float: left;
+}
+    
+.links_iPhone {
+	border-style: outset;
+	border-width: 0px;
+	border-color: #CCCCCC;
+	color: white;
+	background-color: #000000;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	padding: 1px 4px 1px 4px;
+	line-height: 1.4em;
+	float: left;
+}  
+    
+.overlay_iPhone {
+	background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/glare80.png); 
+	background-repeat: no-repeat; 
+	z-index: 1;  
+        border: 1px solid red;
+	height: 400px; width: 280px; 
+	position: absolute; top: 11px; left: 11px    
+}
+    
+.scroll_iPhone {
+    border: 1px solid #333333; 
+    border-style: inset; 
+    float: left; 
+    overflow-y: scroll; 
+    height: 400px; width: 300px;
+    font-family: Helvetica;
+}
+
+.header_iPhone {
+    height: 40px; padding-top: 20px;
+    background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png); 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+}
+
+.footer_iPhone {
+    height: 80px; padding-top: 20px;
+    clear: left;
+    background-image: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png); 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+}        
+
+.thumb_iGoogleIconSmall,                
+.thumb_iPhoneIconSmall {
+	border-style: outset;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	color: white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:block;
+	width: 80px; 
+	height: 80px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+}
+
+.thumb_iGoogleListSmall,        
+.thumb_iPhoneListSmall {
+	border-style: outset;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	color: white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:block;
+	width: 110px; 
+	height: 80px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+        float: left;
+        margin: 1px;
+}
+
+.thumb_iGoogleIconLarge,                
+.thumb_iPhoneIconLarge {
+	border-style: outset;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	color: white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:block;
+	width: 110px; 
+	height: 110px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+}
+    
+.thumb_iGoogleListLarge,
+.thumb_iPhoneListLarge {
+	border-style: outset;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	color: white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:block;
+	width: 150px; 
+	height: 110px; 
+	background-repeat: no-repeat; 
+	background-position: 0px 0px; 
+        float: left;
+        margin: 1px;
+}
+
+
+.spacer_iGoogleList,
+.spacer_iGoogleIcon {
+	margin: 5px; 
+	float: left; 
+	text-wrap: unrestricted;
+	word-wrap: break-word ;
+} 
+
+
+.spacer_iPhoneIcon {
+	margin: 5px; 
+	float: left; 
+	text-wrap: unrestricted;
+	word-wrap: break-word ;
+} 
+ 
+.icon_label_Small {
+	width: 80px; 
+	height: 18px; 
+	overflow: hidden;
+}
+
+.icon_label_Large {
+	width: 110px; 
+	height: 18px; 
+	overflow: hidden;
+}
+
+a.iPhoneIcon:active,
+a.iPhoneIcon:hover,
+a.iPhoneIcon:visited,
+a.iPhoneIcon:link
+{
+color: #ffffff;
+text-decoration: none;
+border: 0 none;
+}
+
+a.iGoogleList:link,    
+a.iGoogleIcon:link,
+a.iGoogleList:visited,
+a.iGoogleIcon:visited,
+a.iGoogleList:hover,
+a.iGoogleIcon:hover,
+a.iGoogleList:active,
+a.iGoogleIcon:active
+{
+color: #222222;
+text-decoration: none;
+border: 0 none;
+}
+
+#link_div.List_iPhone {
+    margin: 0;
+    font-family: Helvetica;
+    background: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+}
+    
+.header_iPhoneList {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    color: #FFFFFF;
+    background: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneToolbar.png) #6d84a2 repeat-x;
+    border-bottom: 1px solid #2d3642;
+}
+    
+.spacer_iPhoneList {
+    margin: 0;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0;
+    background: url(http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneArrow.png) #ffffff no-repeat right center;
+    font-size: 12px;
+    font-weight: bold;
+    list-style: none;
+    font-family: Helvetica;
+    color: #000000;
+    overflow: hidden;
+}
+    
+a.iPhoneList {
+    display: block;
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    color: inherit;
+}
+      
+#tt {
+    position:absolute; 
+    display:block; 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#666; color:#FFF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+  
+  </style>
+  <div id="content_div"></div>
+  <script type="text/javascript">
+  // Acknowledgements:
+  // CSS Styles for the iPhone List were based on the iui (http://code.google.com/p/iui/) project
+
+  // Get userprefs
+  var prefs = new gadgets.Prefs();
+  var entries = prefs.getInt("num_entries");
+  var service = prefs.getString("service");
+  var username = prefs.getString("user_name");
+  var tag = prefs.getString("mark_tag");
+  var imgsize = prefs.getString("image_size");
+  var centerimg= prefs.getBool("center_image");
+  var zoomimg = prefs.getBool("zoom_image");
+  var display = prefs.getString("display");
+  var theme = prefs.getString("theme");
+  var stwkey= prefs.getString("stwkey");
+  var html; 
+  
+  //Force parameters on certain options
+  if (service == "StumbleUpon") {
+    imgsize = "Small";
+  }
+  
+  //Check for MS IE ... Set theme to iGoogle
+  if (document.all) {
+    theme = "iGoogle";
+  }
+  
+  html = "<div class='bezel_" + theme + "'><div id='link_div' class='links_" + theme + "'><br/><br/><br/></div></div>";
+  document.getElementById('content_div').innerHTML = html;
+
+  function getFeed() {  
+    var params = {};  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    var url;
+    url = rssURL();
+
+    html = "<div><b>Loading " + url + "</b></div>";
+    document.getElementById('link_div').innerHTML = html;
+    gadgets.io.makeRequest(url, response, params, 60);
+  };
+
+  function response(obj) { 
+    // obj.data contains the feed data
+    var feed = obj.data;
+    var stwsize, sLinkURL;
+    
+    stwsize = previewSize();   
+ 
+    // Display the feed title and description
+    // Clear out html parameter
+    html = "";
+    
+    if (theme == "iPhone") {
+      html += "<div class='header_iPhone'><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundSpeaker.png' style='border: 0px;' /></center></div>";    
+    }    
+    
+    document.getElementById('link_div').innerHTML = html;
+      
+    html += "<div class='scroll_" + theme + "' >" ; 
+    if (feed != null) {
+      html += "<div class='header_" + theme + display + "' ><center><b>" + feed.Title + "</b></center></div>";
+    }
+    else {
+      html += "<div class='header_" + theme + display + "' ><center><b>Sorry!<br>The RSS Feed was not found<br>Please check the Gadget Settings</b></center></div>";
+    }
+    // Access the data for a given entry
+    if (feed != null && feed.Entry) {
+      for (var i = 0; i < feed.Entry.length; i++) {
+        sLinkURL = linkURL(feed.Entry[i].Link, feed.Entry[i].Summary);
+        html += "<div class='spacer_" + theme + display + "'>"
+          + "<a class='" + theme + display + "' target='_blank' href='" + sLinkURL + "'>"
+          + "<span class='thumb_" + theme + display + imgsize + "' style='background-image: url(" 
+          + thumbURL(sLinkURL, stwsize, feed.Entry[i].Summary)
+          + ");" + chkThumbCenter() + "' onmouseover='tooltip.show(\"" + feed.Entry[i].Title + "\");' onmouseout='tooltip.hide();' >"
+          + "<img src='http://visual-bookmarks.googlecode.com/svn/trunk/glare" + imgsize + display + ".png' style='border: 0px;' />"
+          + "</span>";
+          
+          if (display == "Icon") {
+            html +=  "<div class='icon_label_" + imgsize +"'>"
+            + stripURL(sLinkURL)
+            + "</div>";
+          }
+          else {
+            html += "<span>"
+            + feed.Entry[i].Title
+            + "</span>";
+          }
+        
+        html += "</a></div>";
+      }
+    }    
+    html += "</div>";
+    if (theme == "iPhone") {
+      html += "<div class='footer_iPhone' ><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png' style='border: 0px;' /></center></div>";    
+    }
+    
+    document.getElementById('link_div').innerHTML = html;
+    gadgets.window.adjustHeight();
+  };
+    
+  gadgets.util.registerOnLoadHandler(getFeed);
+    
+    
+  function stripURL(sURL) {  
+    var sDomain;
+    var i;   
+ 
+    //If Service is StumbleUpon ... Extract the actual link
+    if (service == "StumbleUpon") {
+      sURL = sURL.replace(/%2F/g,"/");
+      i = sURL.indexOf("&u=");
+      if (i > -1) {
+        sURL = sURL.substr(i+3);
+      }
+    }
+    
+    i = sURL.indexOf("//");
+    if (i > -1) {
+      sDomain = sURL.substr(i+2);
+      sDomain = sDomain.toLowerCase();
+      i = sDomain.indexOf("www.");
+      if (i > -1) {
+        sDomain = sDomain.substr(i+4);
+      }
+      i = sDomain.indexOf("/");
+      if (i > -1) {
+        sDomain = sDomain.slice(0,i);
+      }
+      
+    }
+    else {
+      sDomain = "No URL Found";
+    }
+    
+    return sDomain;
+  };
+    
+  function previewSize() {  
+
+    if (zoomimg) {
+      return "xlg";
+    }
+    
+    if (imgsize == "Small") { 
+        return "sm";
+    }
+    else {
+        return "lg";
+    }
+    
+  };
+    
+  function rssURL() {  
+    var sURL;
+    
+    switch(service)
+    {
+      case "Delicious":
+        sURL = "http://feeds.delicious.com/v2/rss/";
+        if (username!= "") { 
+          sURL += username + "/" + tag ;
+        }
+        sURL += "?count=" + entries;
+        break;
+      case "Reddit":
+        sURL = "http://www.reddit.com/";
+        if (username != "") {
+          sURL += "user/" + username + "/";
+          if (tag != "") {
+            sURL += tag + "/";
+          }
+        }
+        else {
+          if (tag != "") {
+            sURL += "r/" + tag + "/";
+          }
+          else {
+            sURL += "top/" ;
+          }
+        }
+        sURL += ".rss";
+        break;
+      case "StumbleUpon":
+        sURL = "http://rss.stumbleupon.com/user/" ;
+        if (username != "" ) {
+          sURL += username + "/";
+        }
+        break; 
+      default:
+        sURL = "http://feeds.delicious.com/v2/rss/?count=" + entries;
+        break;
+    }
+
+    return sURL;
+                                   
+  };
+    
+  function chkThumbCenter() {  
+    var x;
+    // Sizes of the previews   
+    //&Size=mcr 75x56
+    //&Size=tny 90x75
+    //&Size=vsm 100x75
+    //&Size=sm 120x90
+    //&Size=lg 200x150
+    //&Size=xlg 320x240    
+    
+    // X Offset = (Total Size - View Size / 2)
+          
+    if (centerimg && display != "List") {      
+      if (imgsize == "Small") {
+        if (zoomimg) {
+          x = (320 - 80) / 2;
+        }
+        else {
+          x = (120 - 80) / 2;
+        }
+      }
+      else {
+        if (zoomimg) {
+          x = (320 - 110) / 2;
+        }
+        else {
+          x = (200 - 110) / 2;
+        }
+      }   
+    
+      return "background-position: -" + x + "px 0px;";   
+    }  
+                                  
+  };
+    
+var tooltip=function(){
+	var id = 'tt';
+	var top = 3;
+	var left = 3;
+	var maxw = 300;
+	var speed = 10;
+	var timer = 20;
+	var endalpha = 95;
+	var alpha = 0;
+	var tt,c,h;
+	var ie = document.all ? true : false;
+	return{
+		show:function(v,w){
+			if(tt == null){
+				tt = document.createElement('div');
+				tt.setAttribute('id',id);
+				c = document.createElement('div');
+				c.setAttribute('id',id + 'cont');
+				tt.appendChild(c);
+				document.body.appendChild(tt);
+				tt.style.opacity = 0;
+				tt.style.filter = 'alpha(opacity=0)';
+				document.onmousemove = this.pos;
+			}
+			tt.style.display = 'block';
+			c.innerHTML = v;
+			tt.style.width = w ? w + 'px' : 'auto';
+			if(!w && ie){
+				tt.style.width = tt.offsetWidth;
+			}
+			if(tt.offsetWidth > maxw){tt.style.width = maxw + 'px'}
+			h = parseInt(tt.offsetHeight) + top;
+			clearInterval(tt.timer);
+			tt.timer = setInterval(function(){tooltip.fade(1)},timer);
+		},
+		pos:function(e){
+			var u = ie ? event.clientY + document.documentElement.scrollTop : e.pageY;
+			var l = ie ? event.clientX + document.documentElement.scrollLeft : e.pageX;
+			tt.style.top = (u - h) + 'px';
+			tt.style.left = (l + left) + 'px';
+		},
+		fade:function(d){
+			var a = alpha;
+			if((a != endalpha && d == 1) || (a != 0 && d == -1)){
+				var i = speed;
+				if(endalpha - a < speed && d == 1){
+					i = endalpha - a;
+				}else if(alpha < speed && d == -1){
+					i = a;
+				}
+				alpha = a + (i * d);
+				tt.style.opacity = alpha * .01;
+				tt.style.filter = 'alpha(opacity=' + alpha + ')';
+			}else{
+				clearInterval(tt.timer);
+				if(d == -1){tt.style.display = 'none'}
+			}
+		},
+		hide:function(){
+			clearInterval(tt.timer);
+			tt.timer = setInterval(function(){tooltip.fade(-1)},timer);
+		}
+	};
+}();  
+
+  function thumbURL(sLink, iSize, sSummary) {  
+    var sURL, i;
+    
+    switch(service)
+    {
+      case "StumbleUpon":
+
+        i = sSummary.indexOf("img src=");
+        if (i > -1) {
+          sURL = sSummary.substr(i+9);  //should start with http
+          i = sURL.indexOf("\"");
+          if (i > -1) {
+            sURL = sURL.substr(0, i);
+          }
+        }
+        else {
+          sURL = "http://www.shrinktheweb.com/xino.php?embed=1&amp;STWAccessKeyId=" + stwkey + "&amp;Size=" + iSize 
+          + "&amp;stwUrl=" + sLink ;
+        }
+
+        break;
+      default:
+        sURL = "http://www.shrinktheweb.com/xino.php?embed=1&amp;STWAccessKeyId=" + stwkey + "&amp;Size=" + iSize 
+          + "&amp;stwUrl=" + sLink ;
+        break;
+    }
+
+    return sURL;
+                                   
+  };  
+  
+  
+  function linkURL(sLink, sSummary) {  
+    var sURL, i;
+    
+    switch(service)
+    {
+      case "Reddit":
+
+        i = sSummary.indexOf("submitted");
+        if (i > -1) {
+          sURL = sSummary.substr(i);
+          i = sURL.indexOf("href=");
+          if (i > -1) {
+            sURL = sURL.substr(i+5);
+          }
+          i = sURL.indexOf("href=");
+          if (i > -1) {
+            sURL = sURL.substr(i+5);
+          }
+          i = sURL.indexOf("href=");
+          if (i > -1) {
+            sURL = sURL.substr(i+6);
+            i = sURL.indexOf("\"");
+            if (i > -1) {
+              sURL = sURL.substr(0,i);
+            }
+            else {
+              sURL = sLink ;
+            }
+          }
+          else {
+            sURL = sLink ;
+          }
+        }
+        else {
+          sURL = sLink ;
+        }
+
+        break;
+      default:
+        sURL = sLink ;
+        break;
+    }
+
+    return sURL;
+                                   
+  };  
+    
+  </script>
+  ]]>
+  </Content>
+</Module>
+
+
