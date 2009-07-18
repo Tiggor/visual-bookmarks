@@ -448,6 +448,24 @@ a.iPhoneList {
   function rssURL() {  
     var sURL;
     
+    //diigo
+    //http://www.diigo.com/rss/user/Timalosi/fivebytes
+    //http://www.diigo.com/rss/
+    //http://www.diigo.com/rss/tag/blog?tab=151
+    
+    //Propeller
+    //http://www.propeller.com/feeds/user_submitted/timalosi/
+    //http://www.propeller.com/feeds/channel/science-technology
+    //http://www.propeller.com/feeds/top/
+    
+    //Digg
+    //http://feeds.digg.com/digg/topic/microsoft/popular.rss
+    //http://feeds.digg.com/digg/popular.rss
+    //http://digg.com/users/TimAlosi/history/submissions.rss
+    //http://digg.com/users/TimAlosi/history.rss
+    //http://digg.com/users/TimAlosi/history/diggs.rss
+    //http://digg.com/users/TimAlosi/history/favorites.rss
+    
     switch(service)
     {
       case "Delicious":
@@ -457,6 +475,68 @@ a.iPhoneList {
         }
         sURL += "?count=" + entries;
         break;
+      case "Diigo":
+    //diigo
+    //http://www.diigo.com/rss/user/Timalosi/fivebytes
+    //http://www.diigo.com/rss/
+    //http://www.diigo.com/rss/tag/blog?tab=151
+        sURL = "http://www.diigo.com/rss/";
+        if (username != "") {
+          sURL += "user/" + username;
+          if (tag != "") {
+            sURL +=  "/" + tag;
+          }
+        }
+        else {
+          if (tag != "") {
+            sURL += "tag/" + tag;
+          }
+        }
+        break;
+      case "Digg":
+    //Digg
+    //http://feeds.digg.com/digg/topic/microsoft/popular.rss
+    //http://feeds.digg.com/digg/popular.rss
+    //http://digg.com/users/TimAlosi/history/submissions.rss
+    //http://digg.com/users/TimAlosi/history.rss
+    //http://digg.com/users/TimAlosi/history/diggs.rss
+    //http://digg.com/users/TimAlosi/history/favorites.rss
+
+        if (username != "") {
+          sURL = "http://digg.com/users/" + username + "/history";
+          if (tag != "") {
+            sURL +=  "/" + tag;
+          }
+          sURL +=  ".rss";
+        }
+        else {
+          sURL = "http://feeds.digg.com/digg/"
+          if (tag != "") {
+            sURL += "topic/" + tag;
+          }
+          sURL += "/popular.rss";
+        }
+        break;
+//Propeller
+    //http://www.propeller.com/feeds/user_submitted/timalosi/
+    //http://www.propeller.com/feeds/channel/science-technology
+    //http://www.propeller.com/feeds/top/
+      case "Propeller":
+        sURL = "http://www.propeller.com/feeds/";
+        if (username != "") {
+          sURL += "user_submitted/" + username + "/";
+        }
+        else {
+          if (tag != "") {
+            sURL += "channel/" + tag;
+          }
+          else {
+            sURL += "top/";
+          }  
+        }
+        break;
+    
+    
       case "Reddit":
         sURL = "http://www.reddit.com/";
         if (username != "") {
