@@ -477,12 +477,20 @@ a.iPhoneList {
     //http://digg.com/users/TimAlosi/history/diggs.rss
     //http://digg.com/users/TimAlosi/history/favorites.rss
     
+    //Delicious
+    //http://delicious.com/popular/google
+    
     switch(service)
     {
       case "Delicious":
         sURL = "http://feeds.delicious.com/v2/rss/";
         if (username!= "") { 
           sURL += username + "/" + tag ;
+        }
+        else {
+          if (tag != "") {
+            sURL += "popular/" + tag;
+          }
         }
         sURL += "?count=" + entries;
         break;
