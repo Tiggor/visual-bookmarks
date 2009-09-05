@@ -754,7 +754,7 @@ var tooltip=function(){
       case "Diigo":
         //http://www.diigo.com/bookmark/http%3A%2F%2Fedtechpower.blogspot.com%2F2009%2F09%2F10-tips-for-teaching-technology-to.html
         sURL = sLink.replace(/%2F/g,"/");
-        sURL = sURL.replace(/%3F/g,":");
+        sURL = sURL.replace(/%3A/g,":");
         i = sURL.indexOf("bookmark/");
         if (i > -1) {
           sURL = sURL.substr(i+9);
