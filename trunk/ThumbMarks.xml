@@ -533,7 +533,7 @@ a.iPhoneList {
           if (tag != "") {
             sURL += "topic/" + tag;
           }
-          sURL += "/popular.rss";
+          sURL += "popular.rss";
         }
         break;
 //Propeller
