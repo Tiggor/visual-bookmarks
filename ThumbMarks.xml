@@ -9,8 +9,6 @@
   <UserPref name="service" display_name="Bookmark Service" default_value="Delicious" datatype="enum" >
     <EnumValue value="Delicious" />
     <EnumValue value="Diigo" />
-    <EnumValue value="Digg" />
-    <EnumValue value="Propeller" />
     <EnumValue value="Reddit" />
     <EnumValue value="StumbleUpon" />
   </UserPref>
