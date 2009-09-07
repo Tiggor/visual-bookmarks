@@ -300,7 +300,9 @@ a.iPhoneList {
   //Force parameters on certain options
   if (service == "StumbleUpon") {
     imgsize = "Small";
-  }
+    centerimg = false;
+    zoomimg = false;
+}
   
   //Check for MS IE ... Set theme to iGoogle
   if (document.all) {
@@ -577,6 +579,9 @@ a.iPhoneList {
         if (username != "" ) {
           sURL += username + "/";
         }
+        else {
+         sURL = "http://code.google.com/p/visual-bookmarks/source/browse/trunk/Thumbmarks-Help-Stumble-User1.xml";
+        } 
         break; 
       default:
         sURL = "http://feeds.delicious.com/v2/rss/?count=" + entries;
