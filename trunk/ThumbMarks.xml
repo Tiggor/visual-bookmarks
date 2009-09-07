@@ -580,7 +580,7 @@ a.iPhoneList {
           sURL += username + "/";
         }
         else {
-         sURL = "http://visual-bookmarks.googlecode.com/svn/trunk/Thumbmarks-Help-Stumble-User1.xml";
+         sURL = "http://visual-bookmarks.googlecode.com/svn/trunk/HelpStumbleUser1.xml";
         } 
         break; 
       default:
