@@ -350,7 +350,7 @@ a.iPhoneList {
       
     html += "<div class='scroll_" + theme + "' >" ; 
     if (feed != null) {
-      html += "<div class='header_" + theme + display + "' ><span><center><b>" + feed.Title + "</b></center></span><span><image src='http://visual-bookmarks.googlecode.com/svn/trunk/HelpIconLarge.png' width='32px' height='31px' style='border: 0px;' /></span></div>";
+      html += "<div class='header_" + theme + display + "' ><center><b>" + feed.Title + "</b></center></div>";
     }
     else {
       html += "<div class='header_" + theme + display + "' ><center><b>Sorry!<br>The RSS Feed was not found<br>Please check the Gadget Settings</b></center></div>";
@@ -380,7 +380,9 @@ a.iPhoneList {
         
         html += "</a></div>";
       }
-    }    
+    } 
+    html += "<div class='spacer_" + theme + display + "'><a class='" + theme + display + "' target='_blank' href='http://code.google.com/p/visual-bookmarks/wiki/Help'>";
+    html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px;' />ThumbMarks Gadget Help</a></div>";
     html += "</div>";
     if (theme == "iPhone") {
       html += "<div class='footer_iPhone' ><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png' style='border: 0px;' /></center></div>";    
