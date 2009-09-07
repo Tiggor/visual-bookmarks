@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  <channel>
+    <title>ThumbMarks Visual Bookmarks Help</title>
+    <link>http://code.google.com/p/visual-bookmarks/wiki/Help</link>
+    <description>Help for ThumbMarks Gadget</description>
+    <language>en-us</language>
+    <pubDate>Mon, 07 Sep 2009 05:05:59 -0700</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2009 19:52:30 -0700</lastBuildDate>
+    <item>
+      <pubDate>Sun, 06 Sep 2009 19:52:30 -0700</pubDate>
+      <title>StumbleUpon Service requires a User Name</title>
+      <guid isPermaLink="true">http://code.google.com/p/visual-bookmarks/wiki/Help</guid>
+      <link>http://code.google.com/p/visual-bookmarks/wiki/Help</link>
+      <description>
+        <![CDATA[
+        To use the StumbleUpon bookmark service with ThumbMarks, you must supply a username.
+        ]]>
+      </description>
+    </item>
+  </channel>
+</rss>
