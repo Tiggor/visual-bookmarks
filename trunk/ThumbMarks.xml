@@ -350,7 +350,7 @@ a.iPhoneList {
       
     html += "<div class='scroll_" + theme + "' >" ; 
     if (feed != null) {
-      html += "<div class='header_" + theme + display + "' ><center><b>" + feed.Title + "</b></center></div>";
+      html += "<div class='header_" + theme + display + "' ><center><b>" + feed.Title + "</b></center><div style="align: right;"><image src='http://visual-bookmarks.googlecode.com/svn/trunk/HelpIconLarge.png' width="32px" height="31px" style='border: 0px;' /></div></div>";
     }
     else {
       html += "<div class='header_" + theme + display + "' ><center><b>Sorry!<br>The RSS Feed was not found<br>Please check the Gadget Settings</b></center></div>";
