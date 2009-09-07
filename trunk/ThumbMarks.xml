@@ -558,9 +558,9 @@ a.iPhoneList {
         sURL = "http://www.reddit.com/";
         if (username != "") {
           sURL += "user/" + username + "/";
-          if (tag != "") {
-            sURL += tag + "/";
-          }
+          //if (tag != "") {
+          //  sURL += tag + "/";
+          //}
         }
         else {
           if (tag != "") {
