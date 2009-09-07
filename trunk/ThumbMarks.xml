@@ -382,7 +382,7 @@ a.iPhoneList {
       }
     } 
     html += "<div class='spacer_" + theme + display + "'><a class='" + theme + display + "' target='_blank' href='http://code.google.com/p/visual-bookmarks/wiki/Help'>";
-    html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px;' /><span style='vertical-align: center;'>ThumbMarks Gadget Help</span></a></div>";
+    html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px;' /><span style='vertical-align: middle;'>ThumbMarks Gadget Help</span></a></div>";
     html += "</div>";
     if (theme == "iPhone") {
       html += "<div class='footer_iPhone' ><center><image src='http://visual-bookmarks.googlecode.com/svn/trunk/iPhoneRoundButton.png' style='border: 0px;' /></center></div>";    
