@@ -383,12 +383,12 @@ a.iPhoneList {
     }
     if (display == "List" || theme == "iPhone") {
       html += "<div class='spacer_" + theme + display + "' style='clear: both;'><a class='" + theme + display + "' target='_blank' href='http://code.google.com/p/visual-bookmarks/wiki/Help'>";
-      html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px;' /><span style='vertical-align: middle;'>ThumbMarks Gadget Help</span></a></div>";
+      html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px; vertical-align: middle;' /><span>ThumbMarks Gadget Help</span></a></div>";
     }
     html += "</div>";
     if (display == "Icon" && theme == "iGoogle") {
       html += "<div class='spacer_" + theme + display + "' style='clear: both;'><a class='" + theme + display + "' target='_blank' href='http://code.google.com/p/visual-bookmarks/wiki/Help'>";
-      html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px;' /><span style='vertical-align: middle;'>ThumbMarks Gadget Help</span></a></div>";
+      html += "<image src='http://visual-bookmarks.googlecode.com/svn/trunk/Help_32.png' style='border: 0px; vertical-align: middle;' /><span>ThumbMarks Gadget Help</span></a></div>";
     }
 
     if (theme == "iPhone") {
