@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="ThumbMarks Visual Bookmarks" 
-    description="This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme" 
+    description="This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Diigo, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme" 
     author="Tim Alosi" author_email="gadget+feedback@timalosi.com" screenshot="http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG" thumbnail="http://code.google.com/p/visual-bookmarks/logo?logo_id=1243343949"
     title_url="http://code.google.com/p/visual-bookmarks/wiki/Home" >
     <Require feature="dynamic-height"/>
@@ -703,7 +703,7 @@ var tooltip=function(){
 
   function thumbURL(sLink, iSize, sSummary) {  
     var sURL, i;
-    
+      
     switch(service)
     {
       case "StumbleUpon":
