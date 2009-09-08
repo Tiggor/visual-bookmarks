@@ -1,12 +1,12 @@
-#summary Home Page for ThumbMarks Visual Bookmark Google Gadget
+#summary ThumbMarks Visual Bookmark Gadget by http://www.timalosi.com
 #labels Featured
 
-= Introduction =
+== Introduction ==
 
 This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme
 
 
-= Screen Shots =
+== Screen Shots ==
 The screen shot below shows three of the four display themes.  There are two themes, an iPhone like theme and a straight iGoogle theme.  For each theme, you can display the links as icons or as a list.
 
 http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG
