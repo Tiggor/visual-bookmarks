@@ -1,9 +1,13 @@
-#summary ThumbMarks Visual Bookmark Gadget by http://www.timalosi.com
+#summary ThumbMarks Visual Bookmark Gadget by [http://www.timalosi.com TimAlosi.com]
 #labels Featured
 
 == Introduction ==
 
-This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme
+This gadget will display visual thumbnails for tagged Bookmark feeds from variousSocial Bookmarking sites.  The gadget can read feeds from *Delicious*, *Diigo*, *Reddit*, and *StumbleUpon*.  
+
+The gadget has two display themes, a traditional _iGoogle_ theme, and one that looks like an _iPhone_.  The gadget uses RSS/Atom from the Social Bookmarking sites and a service from [http://shrinktheweb.com ShrinkTheWeb.com] to deliver thumbnails of your links to your iGoogle page.  
+
+You can display the bookmarks as an icon or as a list, with small or large thumbnails.
 
 
 == Screen Shots ==
