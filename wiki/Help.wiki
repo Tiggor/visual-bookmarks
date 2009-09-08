@@ -3,7 +3,7 @@
 
 = Introduction =
 
-There are several settings that need to be set in order for the ThumbMarks gadget to work correctly.  This page details how to do that.
+There are several settings that need to be set in order for the ThumbMarks gadget to work correctly.  This page details how to do that.  Additional questions can be forwarded to gadget+feedback@timalosi.com
 
 
 = Settings =
