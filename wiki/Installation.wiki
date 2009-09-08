@@ -1,0 +1,17 @@
+#summary How to install the Gadget
+#labels Featured,Phase-Deploy
+
+= Installation =
+
+At the current time, the gadget has been submitted to Google's Directory, but if you cannot find it there, you can still use the gadget via the following methods
+
+Click the following Link.  This will add the gadget to your main iGoogle Page
+http://www.google.com/ig/adde?hl=en&moduleurl=http://visual-bookmarks.googlecode.com/svn/trunk/ThumbMarks.xml&source=imag
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
