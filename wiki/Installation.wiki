@@ -6,12 +6,12 @@
 At the current time, the gadget has been submitted to Google's Directory, but if you cannot find it there, you can still use the gadget via the following methods
 
 Click the following Link.  This will add the gadget to your main iGoogle Page
+
 http://www.google.com/ig/adde?hl=en&moduleurl=http://visual-bookmarks.googlecode.com/svn/trunk/ThumbMarks.xml&source=imag
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+To add the link directly to a specific tab in your iGoogle Page
+  # Navigate to the tab on your iGoogle page that you want to add the gadget to
+  # Click the _*Add Stuff*_ link at the top of the page
+  # On the side, there will be a link labled _*Add feed or gadget*_
+  # Click that link and add the text `http://visual-bookmarks.googlecode.com/svn/trunk/ThumbMarks.xml`
+  # Complete the installation by selecting  _*Back to iGoogle home*_
