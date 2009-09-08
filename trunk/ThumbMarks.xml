@@ -2,8 +2,8 @@
 <Module>
   <ModulePrefs title="ThumbMarks Visual Bookmarks" 
     description="This Gadget will display visual thumbnails for tagged Bookmark feeds from Social Networking sites.  The gadget can read feeds from Delicious, Reddit, and StumbleUpon.  The gadget supports different preview sizes and a normal and iPhone theme" 
-    author="Tim Alosi" author_email="gadget+feedback@timalosi.com" screenshot="" thumbnail=""
-    title_url="http://www.timalosi.com" >
+    author="Tim Alosi" author_email="gadget+feedback@timalosi.com" screenshot="http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG" thumbnail="http://code.google.com/p/visual-bookmarks/logo?logo_id=1243343949"
+    title_url="http://code.google.com/p/visual-bookmarks/wiki/Home" >
     <Require feature="dynamic-height"/>
   </ModulePrefs>
   <UserPref name="service" display_name="Bookmark Service" default_value="Delicious" datatype="enum" >
