@@ -1,4 +1,4 @@
-#summary ThumbMarks Visual Bookmark Gadget by [http://www.timalosi.com TimAlosi.com]
+#summary ThumbMarks Visual Bookmark Gadget
 #labels Featured
 
 == Introduction ==
@@ -8,6 +8,8 @@ This gadget will display visual thumbnails for tagged Bookmark feeds from variou
 The gadget has two display themes, a traditional _iGoogle_ theme, and one that looks like an _iPhone_.  The gadget uses RSS/Atom from the Social Bookmarking sites and a service from [http://shrinktheweb.com ShrinkTheWeb.com] to deliver thumbnails of your links to your iGoogle page.  
 
 You can display the bookmarks as an icon or as a list, with small or large thumbnails.
+
+This gadget was developed by Tim at http://www.timalosi.com
 
 
 == Screen Shots ==
