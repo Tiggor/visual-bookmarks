@@ -3,7 +3,16 @@
 
 = Installation =
 
-At the current time, the gadget has been submitted to Google's Directory, but if you cannot find it there, you can still use the gadget via the following methods
+The ThumbMarks Gadget is listed in the iGoogle Gadget directoy.  To add it from the directory follow the steps below:
+  # Navigate to the tab on your iGoogle page that you want to add the gadget to
+  # Click the _*Add Stuff*_ link at the top of the page
+  # On the right side, type "ThumbMarks" in the _*Search for Gadgets*_ box
+  # Click the _*Add it now*_ button
+  # Complete the installation by selecting  _*Back to iGoogle home*_
+
+
+
+If you cannot find the gadget in the directory, you can still use the gadget via the following methods
 
 Click the following Link.  This will add the gadget to your main iGoogle Page
 
