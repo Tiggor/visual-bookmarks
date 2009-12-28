@@ -5,6 +5,7 @@
     author="Tim Alosi" author_email="gadget+feedback@timalosi.com" screenshot="http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG" thumbnail="http://code.google.com/p/visual-bookmarks/logo?logo_id=1243343949"
     title_url="http://code.google.com/p/visual-bookmarks/wiki/Home" >
     <Require feature="dynamic-height"/>
+	<Require feature="com.google.gadgets.analytics"/>
   </ModulePrefs>
   <UserPref name="service" display_name="Bookmark Service" default_value="Delicious" datatype="enum" >
     <EnumValue value="Delicious" />
@@ -296,7 +297,9 @@ a.iPhoneList {
   var theme = prefs.getString("theme");
   var stwkey= prefs.getString("stwkey");
   var html; 
-  
+  var ga = new _IG_GA("UA-9021749-1");
+  ga.reportPageview('/gadget/' + theme + '/' + service );
+    
   //Force parameters on certain options
   if (service == "StumbleUpon") {
     imgsize = "Small";
