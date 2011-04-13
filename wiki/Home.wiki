@@ -12,7 +12,7 @@ You can display the bookmarks as an icon or as a list, with small or large thumb
 This gadget was developed by Tim at http://www.timalosi.com
 
 == Update ==
-I just posted some slight code changes.  STW required some changes to keep the images being shown correctly.  Tim
+(4/12/2011)  I just posted some slight code changes.  STW required some changes to keep the images being shown correctly.  Tim
 
 == Screen Shots ==
 The screen shot below shows three of the four display themes.  There are two themes, an iPhone like theme and a straight iGoogle theme.  For each theme, you can display the links as icons or as a list.
