@@ -720,14 +720,14 @@ var tooltip=function(){
           }
         }
         else {
-          sURL = "http://www.shrinktheweb.com/xino.php?embed=1&amp;STWAccessKeyId=" + stwkey + "&amp;Size=" + iSize 
-          + "&amp;stwUrl=" + sLink ;
+          sURL = "http://images.shrinktheweb.com/xino.php?embed=1&amp;stwaccesskeyid=" + stwkey + "&amp;size=" + iSize 
+          + "&amp;stwurl=" + sLink ;
         }
 
         break;
       default:
-        sURL = "http://www.shrinktheweb.com/xino.php?embed=1&amp;STWAccessKeyId=" + stwkey + "&amp;Size=" + iSize 
-          + "&amp;stwUrl=" + sLink ;
+        sURL = "http://images.shrinktheweb.com/xino.php?embed=1&amp;stwaccesskeyid=" + stwkey + "&amp;size=" + iSize 
+          + "&amp;stwurl=" + sLink ;
         break;
     }
 
