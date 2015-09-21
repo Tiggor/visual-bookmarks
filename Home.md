@@ -1,0 +1,17 @@
+## Introduction ##
+
+This gadget will display visual thumbnails for tagged Bookmark feeds from variousSocial Bookmarking sites.  The gadget can read feeds from **Delicious**, **Diigo**, **Reddit**, and **StumbleUpon**.
+
+The gadget has two display themes, a traditional _iGoogle_ theme, and one that looks like an _iPhone_.  The gadget uses RSS/Atom from the Social Bookmarking sites and a service from [ShrinkTheWeb.com](http://shrinktheweb.com) to deliver thumbnails of your links to your iGoogle page.
+
+You can display the bookmarks as an icon or as a list, with small or large thumbnails.
+
+This gadget was developed by Tim at http://www.timalosi.com
+
+## Update ##
+(4/12/2011)  I just posted some slight code changes.  STW required some changes to keep the images being shown correctly.  Tim
+
+## Screen Shots ##
+The screen shot below shows three of the four display themes.  There are two themes, an iPhone like theme and a straight iGoogle theme.  For each theme, you can display the links as icons or as a list.
+
+http://visual-bookmarks.googlecode.com/svn/wiki/ThumbMark_ScreenShot.PNG
